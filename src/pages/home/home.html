@@ -1,14 +1,36 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      <img id="appIcon" src="../../assets/imgs/logo.png" alt="">
+      Coraly
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div (click)="ShowImageOptions();" id="imageContainer">
+    <div [ngClass]="{ disabled: disabledPlaceHolder == true }" id="placeHolder">
+      <ion-icon class="placeHolderIcon" name="camera"></ion-icon>
+      <br>
+      Pick your image...
+    </div>
+    <img id="imageObject" [src]="coralImage" *ngIf="coralImage">
+  </div>
+
+    <div id="stateContainer">
+      <span>{{stateMessage}}</span>
+      <br><br>
+      <div [ngClass]="{ disabled: disabledSuccessContainer == true }" id="successContainer">
+        It's
+        <span class="dataContainer">{{percentage}}%</span> 
+        sure that you found a
+        <span class="dataContainer">{{descriptionLabel}} {{coralType}} coral</span>
+        nearby.
+        <br><br>
+        Find out more <span class="dataContainer" (click)="OpenLink();">here</span>.
+      </div>
+      <br>
+    </div>
+
+    <button [ngClass]="{ disabled: disabledSuccessContainer == true }" (click)="ConfirmTrigger();" id="informButton" ion-button color="primary">Inform us</button>
 </ion-content>

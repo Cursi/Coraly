@@ -1,3 +1,92 @@
-page-home {
+#appIcon
+{
+    height: 30px;
+    vertical-align: bottom;
+}
 
+page-home .scroll-content 
+{
+    background-color: color($colors, light, base);
+    overflow: hidden;
+}
+
+.toolbar-background
+{
+    background-color: color($colors, primary, base);
+}
+
+.toolbar-title
+{
+    padding: 0;
+    color: color($colors, light, base);
+}
+
+#imageContainer
+{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px;
+    align-items: center;
+    text-align: center;
+
+    margin: auto;
+
+    width: 260px;
+
+    border: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: color($colors, dark, base);
+
+    margin-bottom: 10px;
+
+    cursor: pointer;
+    font-size: 20px;
+    background-color: color($colors, light, base);
+}
+
+.placeHolderIcon
+{
+    font-size: 40px !important;
+    color: color($colors, primary, base);
+    margin-bottom: 10px;
+}
+
+#imageObject
+{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 6px;
+}
+
+#stateContainer
+{
+    font-size: 20px;
+    text-align: center;
+}
+
+.dataContainer
+{
+    color: color($colors, primary, base);
+    font-weight: 700;
+}
+
+#informButton
+{
+    position: fixed;
+    bottom: 0;
+    left: 4px;
+    width: calc(100% - 12px);
+}
+
+.disabled
+{
+    display: none;
+}
+
+.action-sheet-group
+{
+    overflow: hidden;
 }
